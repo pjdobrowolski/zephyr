@@ -233,6 +233,10 @@ SECTIONS {
     _DoubleExceptionVector_text_end = .;
   } >vector_double_text
 
+  .xyz.text : {
+	*(.literal.up_down*)
+  } >ram
+  
   .text : {
     __text_region_start = .;
     *(.iram1 .iram1.*)
